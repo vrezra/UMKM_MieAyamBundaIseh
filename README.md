@@ -1,1 +1,0 @@
-# UMKM_MieAyamBundaIseh
