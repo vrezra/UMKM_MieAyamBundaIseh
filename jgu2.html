@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mie Ayam Iseh - Restoran Terbaik</title>
+    <link rel="stylesheet" href="jgu.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Huninn&display=swap"
+      rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="loader">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="flex">
+      <div class="left">
+        <img src="img/logo_jgu-removebg-preview.png" alt="Logo JGU" />
+      </div>
+      <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="right" id="nav-menu">
+        <ul>
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#testimoni">Testimoni</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="flex" id="home">
+      <div class="header">
+        <h2>
+          Selamat Datang di <br>
+        </h2>
+        <h1>Mie Ayam Iseh</h1>
+        <br />
+        <p>
+          Nikmati kelezatan mie ayam terbaik dengan racikan bumbu tradisional yang autentik. 
+          Dapur Bunda Iseh menghadirkan cita rasa yang memanjakan lidah Anda.
+        </p>
+        <br />
+        <a class="a-menu" href="#menu">Lihat Menu</a>
+      </div>
+      <div class="header-img">
+        <img
+          src="img/mie air.png"
+          alt="Mie Ayam Lezat"
+          class="floating-image"
+        />
+      </div>
+    </header>
+
+    <section class="about" id="about">
+      <div class="about-image">
+        <img src="img/el ga rispek.png" alt="Restoran Kami" />
+      </div>
+      <div class="about-content">
+        <h1>Tentang kami</h1>
+        <br />
+        <p>
+          Dapur Bunda Iseh adalah restoran mie ayam yang telah melayani pelanggan setia sejak 2017. 
+          Kami berkomitmen menghadirkan cita rasa autentik dengan bahan berkualitas tinggi.
+        </p>
+      </div>
+    </section>
+
+    <section class="journey" id="journey">
+      <div class="journey-content">
+        <h1 class="judul">Perjalanan Kami</h1>
+        <br />
+        <p class="isi">
+          Dari dapur kecil hingga menjadi restoran favorit masyarakat Depok, 
+          perjalanan kami penuh dengan dedikasi dan cinta terhadap kuliner Indonesia.
+        </p>
+      </div>
+      <div class="timeline">
+        <div class="line"></div>
+        <div class="step" data-year="2015">
+          <div class="circle"></div>
+          <div class="box yellow">
+            <div class="icon">💡</div>
+            <h3>Ide Bermula</h3>
+            <p>Dimulai dari ide sederhana untuk menghadirkan mie ayam Iseh</p>
+          </div>
+        </div>
+
+        <div class="step" data-year="2017">
+          <div class="circle"></div>
+          <div class="box gold">
+            <div class="icon">💵</div>
+            <h3>Modal Pertama</h3>
+            <p>Mengumpulkan modal dan membuka gerai pertama di Depok</p>
+          </div>
+        </div>
+
+        <div class="step" data-year="2019">
+          <div class="circle"></div>
+          <div class="box orange">
+            <div class="icon">🍜</div>
+            <h3>Menu Berkembang</h3>
+            <p>Menambahkan variasi menu seperti baso aci dan es teler</p>
+          </div>
+        </div>
+
+        <div class="step" data-year="2023">
+          <div class="circle"></div>
+          <div class="box red">
+            <div class="icon">🏬</div>
+            <h3>Restoran Tercinta</h3>
+            <p>Menjadi restoran favorit dengan ribuan pelanggan setia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <h1 class="jm" id="menu">Menu Kami</h1>
+
+    <section class="menu" id="menu">
+      <!-- Mie Ayam -->
+      <div class="menu-card" data-menu="mie-ayam">
+        <div class="menu-img">
+          <img src="img/mie ayam menu.png" alt="Mie Ayam" />
+          <img src="img/best selelr.png" class="label" alt="Best Seller" />
+        </div>
+        <h2>Mie Ayam</h2>
+        <p class="price">Rp. 15.500</p>
+        <p class="desc">
+          Mie ayam dengan kuah kaldu ayam yang gurih, ditambah sayuran segar dan ayam suwir
+        </p>
+        <button class="order-btn">Pesan Sekarang</button>
+      </div>
+
+      <!-- Baso Aci -->
+      <div class="menu-card" data-menu="baso-aci">
+        <div class="menu-img">
+          <img src="img/Boci.png" alt="Baso Aci" />
+          <img src="img/jempol.png" class="label" alt="Recommended" />
+        </div>
+        <h2>Baso Aci</h2>
+        <p class="price">Rp. 13.000</p>
+        <p class="desc">
+          Baso aci dengan tekstur kenyal, disajikan dengan kuah pedas yang menggugah selera
+        </p>
+        <button class="order-btn">Pesan Sekarang</button>
+      </div>
+
+      <!-- Es Teler -->
+      <div class="menu-card" data-menu="es-teler">
+        <div class="menu-img">
+          <img src="img/es teler.png" alt="Es Teler" />
+        </div>
+        <h2>Es Teler</h2>
+        <p class="price">Rp. 14.000</p>
+        <p class="desc">
+          Es teler segar dengan campuran buah-buahan dan santan yang manis dan menyegarkan
+        </p>
+        <button class="order-btn">Pesan Sekarang</button>
+      </div>
+    </section>
+
+    <!-- Menu Modal -->
+    <div id="menu-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <!-- Testimonial Section -->
+    <section class="testi-section" id="testimoni">
+      <h3 class="testi-title">Testimoni Pelanggan</h3>
+      <div class="testi-cards">
+        <div class="testi-card">
+          <p class="testi-comment"><b>"mie ayam nya enak banget lohh ya, aku mau 2 lagi 🤤"</b></p>
+          <div class="testi-user">
+            <img src="img/Screenshot_28-6-2025_225448_www.bing.com.jpeg" alt="Amba" class="user-icon" />
+            <div class="user-details">
+              <strong>Orriza</strong><br/>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <p class="testi-comment"><b>"uweenak buangett rekk, mana tahan dengan es teler nya😄"</b></p>
+          <div class="testi-user">
+            <img src="img/images.jpeg.jpg" alt="Abcoda" class="user-icon" />
+            <div class="user-details">
+              <strong>Ariandi</strong><br/>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <p class="testi-comment"><b>"sukaa bangett boci nya, pedas nya juga bikin nagihh "</b></p>
+          <div class="testi-user">
+            <img src="img/apa-coba.png" alt="Rina" class="user-icon" />
+            <div class="user-details">
+              <strong>Rina</strong><br/>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Contact Section -->
+<section class="contact-body" id="kontak">
+  <div class="contact-section">
+    <div class="contact-map">
+      <div id="map"></div>
+    </div>
+    <div class="contact-info">
+      <p><b>Alamat:</b><br />Jl. Lembah Raya No.76, RT.03/ RW.04, Tapos, Kota Depok, <br> Jawa Barat 16457</p>
+      <p><b>Nomor Telepon:</b><br />089638323195</p>
+      <p><b>Jam Operasional:</b><br />08.00 - 21.00 WIB</p>
+    </div>
+  </div>
+</section>
+
+<!-- Leaflet CSS & JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Leaflet Map Script -->
+    <footer>
+      <div class="fl">
+        <h2>Mie Ayam Iseh</h2>
+        <br />
+        <p>
+          Dapur Bunda Iseh menghadirkan cita rasa autentik mie ayam dengan bahan berkualitas tinggi. Kami berkomitmen memberikan pengalaman kuliner terbaik untuk setiap pelanggan, dengan racikan bumbu khas dan pelayanan yang ramah. Setiap mangkuk mie ayam disiapkan dengan sepenuh hati, menjadikan setiap kunjungan Anda momen yang berkesan.
+        </p>
+      </div>
+      <div class="fr">
+        <h2>Hubungi Kami</h2>
+        <div class="ff">
+          <div class="no-hover">
+            <p>Nomor Telepon</p>
+            <h4>089638323195</h4>
+          </div>
+        </div>
+
+        <div class="flex-footer">
+          <h2>Di Dukung oleh :</h2>
+          <img src="img/LOGO ITS DAY PUTIH PNG.png" alt=""> 
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
